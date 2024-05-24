@@ -1,0 +1,75 @@
+.image_container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    img {
+        width: 90%;
+        height: 1000px;
+        object-fit: fill;
+        object-position: top;
+    }
+
+    .text_container {
+        position: absolute;
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        color: white;
+
+        h1 {
+            overflow-y: hidden;
+            font-size: 5rem;
+        }
+
+        h2 {
+            overflow-y: hidden;
+            font-size: 1.5rem;
+        }
+
+        button {
+            color: black;
+            background: white;
+            padding: 15px 25px;
+            border-radius: 20px;
+            border: none;
+            font-weight: bold;
+        }
+    }
+
+    .data_container {
+        position: absolute;
+        display: flex;
+        bottom: 50px;
+        justify-content: space-between;
+        width: 80%;
+        .numbers {
+            display: flex;
+            justify-content: space-between;
+            gap: 35px;
+            div {
+                color: white;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                h3 {
+                    font-size: 3rem;
+                    &:nth-of-type(2) {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+        .citation_container{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            gap: 10px;
+            width: 20%;
+            font-size: 0.8rem;
+        }
+    }
+}
