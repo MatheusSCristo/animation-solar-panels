@@ -12,11 +12,11 @@ const Image = () => {
     <div>
       <div className={styles.image_container}>
         <motion.img
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [0, 0.8, 0.9, 1], borderRadius: [0, 0, 20, 30] }}
+          initial={{ height: "0px" }}
+          animate={{ height: "1000px", borderRadius: [0, 0, 20, 30] }}
           transition={{
-            duration: 1,
-            delay: 3,
+            duration: 0.8,
+            delay: 3.4,
             ease: "easeInOut",
             times: [0, 0.9, 0.95, 1],
           }}
@@ -49,7 +49,7 @@ const Image = () => {
           <motion.h2
             initial={{ y: "100%", rotateX: "-90deg" }}
             animate={{ y: 0, rotateX: 0 }}
-            transition={{ duration: 0.5, delay: 4.6, ease: "easeInOut" }}
+            transition={{ duration: 0.5, delay: 4.9, ease: "easeInOut" }}
           >
             Eum nihil fugiat est dolores commodi eum galisum iste et officiis
             eius.
@@ -65,13 +65,13 @@ const Image = () => {
         <div className={styles.data_container}>
           <div className={styles.numbers}>
             {data.map((item, index) => (
-              <div>
+              <div key={item.text}>
                 <motion.h3
                   initial={{ y: "100%", rotateX: "-90deg" }}
                   animate={{ y: 0, rotateX: 0 }}
                   transition={{
                     duration: 0.3,
-                    delay: 5 + 0.1 * index,
+                    delay: 5.4 + 0.5 * index,
                     ease: "easeInOut",
                   }}
                 >
@@ -82,7 +82,7 @@ const Image = () => {
                   animate={{ y: 0, rotateX: 0 }}
                   transition={{
                     duration: 0.5,
-                    delay: 5.2 + 0.1 * index,
+                    delay: 5.5 + 0.6 * index,
                     ease: "easeInOut",
                   }}
                 >
@@ -95,14 +95,14 @@ const Image = () => {
             <motion.h2
               initial={{ y: "100%", rotateX: "-90deg" }}
               animate={{ y: 0, rotateX: 0 }}
-              transition={{ duration: 0.7, delay: 5.4, ease: "easeInOut" }}
+              transition={{ duration: 0.7, delay: 6.7, ease: "easeInOut" }}
             >
               "Lorem ipsum dolor sit amet. Qui molestiae dignissimos ex maiores"
             </motion.h2>
             <motion.h2
               initial={{ y: "100%", rotateX: "-90deg" }}
               animate={{ y: 0, rotateX: 0 }}
-              transition={{ duration: 0.7, delay: 5.5, ease: "easeInOut" }}
+              transition={{ duration: 0.7, delay: 6.7, ease: "easeInOut" }}
             >
               Abraham Sa'ad -Founder
             </motion.h2>
