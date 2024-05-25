@@ -1,22 +1,12 @@
-import { motion } from "framer-motion";
-import Image from "./components/Image";
-import Logo from "./components/Logo";
-import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Home from "./components/Home/Index";
 
 function App() {
   return (
-    <div className="home">
-      <motion.div
-        className="container"
-        initial={{ y: "-100%" }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: "easeInOut" }}
-        >
-        <Navbar/>
-        <Logo />
-        <Image/>
-      </motion.div>
-    </div>
+    <>
+    <Home/>
+    <About/>
+    </>
   );
 }
 

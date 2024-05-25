@@ -1,0 +1,18 @@
+
+.container{
+    padding: 5px 20px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: min-content;
+    width: 100vw;
+    gap: 20px;
+    position: relative;
+}
+
+.home{
+    background:black;
+    display: flex;
+    flex-direction: column;
+}
