@@ -3,10 +3,10 @@ import Home from "./components/Home/Index";
 
 function App() {
   return (
-    <>
+    <main >
     <Home/>
     <About/>
-    </>
+    </main>
   );
 }
 
