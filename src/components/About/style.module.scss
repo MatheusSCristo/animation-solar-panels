@@ -13,10 +13,24 @@
     border-radius: 30px;
     width: 100%;
     transition: all 0.3s ease;
-
     .text_container{
         display: flex;
         flex-direction: column;
+        position: relative;
+        div{
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            bottom: 50px;
+            .image_selector{
+                cursor: pointer;
+                height: 8px;
+                width: 75px;
+                background-color:#bebebe ;
+                border-radius: 5px;
+            }
+        }
+
     }
 
     .images_container{

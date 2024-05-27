@@ -15,6 +15,10 @@ const About = () => {
     }
   }, [onView]);
 
+  const handleImageSelector = (imageNumber: number) => {
+    controllers.start(imageNumber === 1 ? "1" : "2");
+  };
+
   return (
     <div className={styles.about}>
       <div className={styles.text_container}>
@@ -32,6 +36,30 @@ const About = () => {
             {word}
           </motion.h1>
         ))}
+        <div>
+          <motion.span
+            variants={{
+              2: { width: "150px", background: "#202020" },
+              1: { width: "75px", background: "#bebebe" },
+            }}
+            initial="1"
+            animate={controllers}
+            transition={{ duration: 0.5 }}
+            onHoverStart={() => handleImageSelector(2)}
+            className={styles.image_selector}
+          />
+          <motion.span
+            variants={{
+              2: { width: "75px", background: "#bebebe" },
+              1: { width: "150px", background: "#202020" },
+            }}
+            initial="2"
+            animate={controllers}
+            transition={{ duration: 0.5 }}
+            onHoverStart={() => handleImageSelector(1)}
+            className={styles.image_selector}
+          />
+        </div>
       </div>
       <motion.div
         ref={ref}
@@ -44,8 +72,15 @@ const About = () => {
           variants={{
             initial: { y: "-300%" },
             visible: { y: ["-300%", "-300%", "-300%", "-50%", "0%", "0%"] },
+            1: {
+              y: ["0%", "-150%", "-200%", "-250%", "-300%", "-300%"],
+              transition: { duration: 0.8 },
+            },
+            2: {
+              y: ["-300%", "-150%", "-50%", "-25%", "0%", "0%"],
+              transition: { duration: 0.8 },
+            },
           }}
-
           initial="initial"
           animate={controllers}
           transition={{
@@ -80,6 +115,14 @@ const About = () => {
           variants={{
             initial: { y: "-100%" },
             visible: { y: ["-100%", "-100%", "-100%", "100%", "100%", "100%"] },
+            1: {
+              y: ["100%", "50%", "-50%", "-75%", "-100%", "-100%"],
+              transition: { duration: 0.8 },
+            },
+            2: {
+              y: ["-100%", "-50%", "0%", "75%", "100%", "100%"],
+              transition: { duration: 0.8 },
+            },
           }}
           initial="initial"
           animate={controllers}
