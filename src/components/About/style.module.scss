@@ -2,11 +2,11 @@
     display: flex;
     justify-content:space-evenly;
     margin: auto;
-    height: 60vh;
+    height: 80vh;
     background-color: #f0efef;
     font-size: 2rem;
     font-weight: 500;
-    padding: 100px 20px 0px 20px;
+    padding: 40px 20px ;
     text-transform: capitalize;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -38,16 +38,21 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        div{
+        .block{
+            width: fit-content;
+            padding:20px 30px;
             display: flex;
             flex-direction: column;
             gap: 15px;
+            background: white ;
+            border-radius:20px ;
             h1{
                 font-size: 2.5rem;
+                font-weight: 500;
             }
             h2{
                 font-size: 1.2rem;
-                color: #adadad;
+                color: #beb7b7;
                 font-weight: 200;
                 width: 600px;
             }
@@ -56,8 +61,8 @@
                 flex-direction: row;
                 gap: 15px;
                 img{
-                    width: 350px;
-                    height: 350px;
+                    width: 250px;
+                    height: 300px;
                     
                 }
             }

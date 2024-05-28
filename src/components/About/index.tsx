@@ -20,7 +20,7 @@ const About = () => {
   };
 
   return (
-    <div className={styles.about}>
+    <div className={styles.about} id="about" >
       <div className={styles.text_container}>
         {words.map((word, index) => (
           <motion.h1
@@ -69,6 +69,7 @@ const About = () => {
         transition={{ delay: 0.5, duration: 1, times: [0, 0.2, 0.5, 0.7, 1] }}
       >
         <motion.div
+          className={styles.block}
           variants={{
             initial: { y: "-300%" },
             visible: { y: ["-300%", "-300%", "-300%", "-50%", "0%", "0%"] },
@@ -96,22 +97,17 @@ const About = () => {
           </h2>
           <div className={styles.images_block}>
             <motion.img
-              initial={{ borderRadius: 0 }}
-              whileInView={{ borderRadius: "20px" }}
-              transition={{ delay: 1 }}
               src="/images/expertise1.jpg"
               alt="Strategic Expertise image"
             />
             <motion.img
-              initial={{ borderRadius: 0 }}
-              whileInView={{ borderRadius: "20px" }}
-              transition={{ delay: 1 }}
               src="/images/expertise2.jpg"
               alt="Strategic Expertise image"
             />
           </div>
         </motion.div>
         <motion.div
+          className={styles.block}
           variants={{
             initial: { y: "-100%" },
             visible: { y: ["-100%", "-100%", "-100%", "100%", "100%", "100%"] },
@@ -139,16 +135,10 @@ const About = () => {
           </h2>
           <div className={styles.images_block}>
             <motion.img
-              initial={{ borderRadius: 0 }}
-              whileInView={{ borderRadius: "20px" }}
-              transition={{ delay: 1 }}
               src="/images/panel1.jpg"
               alt="Expertise Installation image"
             />
             <motion.img
-              initial={{ borderRadius: 0 }}
-              whileInView={{ borderRadius: "20px" }}
-              transition={{ delay: 1 }}
               src="/images/panel2.jpg"
               alt="Expertise Installation image"
             />
