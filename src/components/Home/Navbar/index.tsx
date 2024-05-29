@@ -27,6 +27,7 @@ const Navbar = () => {
       <div>
         {options.map((option, index) => (
           <Link
+            key={option.name}
             to={option.link}
             smooth={true}
             duration={200}

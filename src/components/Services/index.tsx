@@ -24,7 +24,7 @@ const cards = [
 
 const Services = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="services">
       <div className={styles.wrapper}>
         <motion.h1
           initial={{ y: "100%", rotateX: "-90deg" }}
@@ -43,15 +43,16 @@ const Services = () => {
         <div className={styles.card_container}>
           {cards.map((card, index) => (
             <motion.div
+              key={index}
               className={styles.card}
               initial={{ opacity: 0, y: "100%" }}
-              whileInView={{ opacity: [0,0.2,0.4,0.7,1], y: "0%" }}
-              viewport={{once:true}}
+              whileInView={{ opacity: [0, 0.2, 0.4, 0.7, 1], y: "0%" }}
+              viewport={{ once: true }}
               transition={{
                 duration: 1,
                 delay: 0.3 + index * 0.3,
                 ease: "easeInOut",
-                times:[0,0.3,0.7,0.9,1]
+                times: [0, 0.3, 0.7, 0.9, 1],
               }}
             >
               <img src={`/images/person${index + 1}.jpg`} alt="Person image" />

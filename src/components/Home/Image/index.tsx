@@ -71,7 +71,7 @@ const Image = () => {
                   animate={{ y: 0, rotateX: 0 }}
                   transition={{
                     duration: 0.3,
-                    delay: 5.4 + 0.3 * index,
+                    delay: 4.5 + 0.3 * index,
                     ease: "easeInOut",
                   }}
                 >
@@ -82,7 +82,7 @@ const Image = () => {
                   animate={{ y: 0, rotateX: 0 }}
                   transition={{
                     duration: 0.5,
-                    delay: 5.5 + 0.4 * index,
+                    delay: 4.6 + 0.3 * index,
                     ease: "easeInOut",
                   }}
                 >
@@ -95,14 +95,14 @@ const Image = () => {
             <motion.h2
               initial={{ y: "100%", rotateX: "-90deg" }}
               animate={{ y: 0, rotateX: 0 }}
-              transition={{ duration: 0.7, delay: 6.7, ease: "easeInOut" }}
+              transition={{ duration: 0.7, delay: 5.4, ease: "easeInOut" }}
             >
               "Lorem ipsum dolor sit amet. Qui molestiae dignissimos ex maiores"
             </motion.h2>
             <motion.h2
               initial={{ y: "100%", rotateX: "-90deg" }}
               animate={{ y: 0, rotateX: 0 }}
-              transition={{ duration: 0.7, delay: 6.7, ease: "easeInOut" }}
+              transition={{ duration: 0.7, delay: 5.4, ease: "easeInOut" }}
             >
               Abraham Sa'ad -Founder
             </motion.h2>

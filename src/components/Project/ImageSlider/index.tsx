@@ -10,13 +10,21 @@ import styles from "./style.module.scss";
 
 const slides = [
   { id: 3, title: "Colorado - EUA", year: 2019, owner: "Jhon Locke" },
+  { id: 4, title: "Sydney - Australia", year: 2024, owner: "Carlos Juan" },
   {
     id: 5,
     title: "Campo Grande - Brazil",
     year: 2022,
     owner: "Pedro Ferreira",
   },
+  { id: 3, title: "Colorado - EUA", year: 2019, owner: "Jhon Locke" },
   { id: 4, title: "Sydney - Australia", year: 2024, owner: "Carlos Juan" },
+  {
+    id: 5,
+    title: "Campo Grande - Brazil",
+    year: 2022,
+    owner: "Pedro Ferreira",
+  },
 ];
 
 const ImageSlider = () => {
@@ -29,16 +37,16 @@ const ImageSlider = () => {
       <Swiper
         className={styles.image_container}
         direction="vertical"
-        spaceBetween={50}
+        spaceBetween={100}
         autoplay={{
-          delay: 3500,
+          delay: 2500,
           disableOnInteraction: false,
         }}
         loop={true}
         modules={[Autoplay]}
       >
-        {slides.map((item) => (
-          <SwiperSlide key={item.id} className={styles.image_wrapper}>
+        {slides.map((item,index) => (
+          <SwiperSlide key={index} className={styles.image_wrapper}>
             <motion.img
               initial={{ borderRadius: "0px" }}
               whileInView={{
