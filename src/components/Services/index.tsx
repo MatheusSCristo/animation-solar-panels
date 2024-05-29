@@ -25,7 +25,12 @@ const cards = [
 const Services = () => {
   return (
     <div className={styles.container} id="services">
-      <div className={styles.wrapper}>
+      <motion.div
+        className={styles.wrapper}
+        initial={{ height: "0px",paddingTop: "0px"	}}
+        whileInView={{ height: "800px",paddingTop: "50px"}}
+        transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
+      >
         <motion.h1
           initial={{ y: "100%", rotateX: "-90deg" }}
           whileInView={{ y: "0%", rotateX: "0" }}
@@ -64,7 +69,7 @@ const Services = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

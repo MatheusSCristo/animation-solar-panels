@@ -1,4 +1,9 @@
 .navbar{
+    z-index: 5;
+    width: 100%;
+    background-color: #f5f3f3;
+    top: 0;
+    position:sticky;
     padding: 10px 50px;
     overflow-y: hidden;
     display: flex;

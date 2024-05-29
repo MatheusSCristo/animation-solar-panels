@@ -11,7 +11,6 @@ const Navbar = () => {
     { name: "teams", link: "teams" },
   ];
 
-  const link = "";
 
   return (
     <div className={styles.navbar}>
@@ -33,12 +32,11 @@ const Navbar = () => {
             duration={200}
             spy={true}
             offset={-70}
+            activeStyle={{ color: "#000000" }}
+            style={{color:"#b9b9b9",transition:"color 0.3s ease-in-out"}}
+
           >
-            <motion.h2
-              style={{
-                fontWeight: option.link == link ? "bold" : "normal",
-                color: option.link == link ? "#000000" : "#b9b9b9",
-              }}
+            <motion.h2 
               key={index}
               initial={{ y: "200%" }}
               animate={{ y: 0 }}

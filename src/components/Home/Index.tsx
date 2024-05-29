@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "./Image";
 import Logo from "./Logo";
-import Navbar from "./Navbar";
 import styles from "./style.module.scss";
 
 const Home = () => {
@@ -14,7 +13,6 @@ const Home = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
-        <Navbar />
         <Logo />
         <Image />
       </motion.div>
