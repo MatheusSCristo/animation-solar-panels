@@ -4,6 +4,7 @@ import Home from "./components/Home/Index";
 import Navbar from "./components/Home/Navbar";
 import Project from "./components/Project";
 import Services from "./components/Services";
+import Teams from "./components/Teams";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <About />
         <Project />
         <Services />
+        <Teams/>
       </motion.div>
     </main>
   );
