@@ -4,7 +4,6 @@ import styles from "./style.module.scss";
 
 const pages = [
   { name: "home", link: "home" },
-  { name: "About Us", link: "about" },
   { name: "project", link: "project" },
   { name: "services", link: "services" },
   { name: "teams", link: "teams" },

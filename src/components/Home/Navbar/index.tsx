@@ -4,11 +4,10 @@ import styles from "./style.module.scss";
 
 const Navbar = () => {
   const options = [
-    { name: "home", link: "home" },
-    { name: "About Us", link: "about" },
-    { name: "project", link: "project" },
-    { name: "services", link: "services" },
-    { name: "teams", link: "teams" },
+    { name: "home", link: "home",offset:-100 },
+    { name: "project", link: "project",offset:-50 },
+    { name: "services", link: "services",offset:-100 },
+    { name: "teams", link: "teams",offset:-70 },
   ];
 
 
@@ -31,7 +30,7 @@ const Navbar = () => {
             smooth={true}
             duration={200}
             spy={true}
-            offset={-70}
+            offset={option.offset}
             activeStyle={{ color: "#000000" }}
             style={{color:"#b9b9b9",transition:"color 0.3s ease-in-out"}}
 

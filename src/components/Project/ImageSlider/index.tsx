@@ -30,9 +30,9 @@ const slides = [
 const ImageSlider = () => {
   return (
     <motion.div
-      initial={{ height: "0", scaleX: "1.2", borderRadius: "0px" }}
-      whileInView={{ height: "600px", scaleX: "1.0", borderRadius: "30px" }}
-      transition={{ duration: 0.8, delay: 0.3, ease: "easeInOut" }}
+      initial={{ height: "0" ,borderRadius: "0px" }}
+      whileInView={{ height: "600px", borderRadius: "30px" }}
+      transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
     >
       <Swiper
         className={styles.image_container}
@@ -46,16 +46,22 @@ const ImageSlider = () => {
         modules={[Autoplay]}
       >
         {slides.map((item,index) => (
-          <SwiperSlide key={index} className={styles.image_wrapper}>
+          <motion.div initial={{ height: "0", scaleX: "1.2" }}
+          whileInView={{ height: "600px", scaleX: "1.0" }}
+          transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
+          key={index}>
+
+          <SwiperSlide  className={styles.image_wrapper}>
             <motion.img
-              initial={{ borderRadius: "0px" }}
+              initial={{ borderRadius: "0px",height:index==0?"0px":"100%" }}
               whileInView={{
                 borderRadius: "30px",
+                height: "100%",
               }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6, ease: "easeInOut" }}
               src={`/images/panel${item.id}.jpg`}
-            />
+              />
             <div className={styles.text_container}>
               <h1>{item.title}</h1>
               <div className={styles.subTitle_container}>
@@ -65,6 +71,8 @@ const ImageSlider = () => {
               </div>
             </div>
           </SwiperSlide>
+          </motion.div>
+
         ))}
       </Swiper>
     </motion.div>

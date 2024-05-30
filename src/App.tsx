@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import About from "./components/About";
 import Home from "./components/Home/Index";
 import Navbar from "./components/Home/Navbar";
 import Project from "./components/Project";
@@ -7,6 +6,8 @@ import Services from "./components/Services";
 import Teams from "./components/Teams";
 
 function App() {
+
+
   return (
     <main>
       <Navbar/>
@@ -16,7 +17,6 @@ function App() {
         animate={{ display: "flex" }}
         transition={{ delay: 6, duration: 0.5 }}
       >
-        <About />
         <Project />
         <Services />
         <Teams/>
