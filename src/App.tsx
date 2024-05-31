@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Home from "./components/Home/Index";
-import Logo from "./components/Home/Logo";
-import Navbar from "./components/Home/Navbar";
+import Logo from "./components/Logo";
+import Navbar from "./components/Navbar";
 import Project from "./components/Project";
 import Services from "./components/Services";
 import Teams from "./components/Teams";

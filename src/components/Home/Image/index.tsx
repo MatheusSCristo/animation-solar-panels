@@ -13,7 +13,7 @@ const Image = () => {
       <div className={styles.image_container}>
         <motion.img
           initial={{ height: "0px" }}
-          animate={{ height: "800px", borderRadius: [0, 0, 20, 30] }}
+          animate={{ height: "100%", borderRadius: [0, 0, 20, 30] }}
           transition={{
             duration: 0.8,
             delay: 3.4,
