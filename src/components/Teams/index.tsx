@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useAnimationControls, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import styles from "./style.module.scss";
 
@@ -17,34 +18,48 @@ const testimonials = [
 ];
 
 const Teams = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref);
+  const controller = useAnimationControls();
+
+  useEffect(() => {
+    if (inView) {
+      controller.start("animate");
+    }
+  }, [inView]);
+
   return (
     <div className={styles.container} id="teams">
-      <div className={styles.wrapper}>
+      <div className={styles.wrapper} ref={ref}>
         <div className={styles.text_container}>
           <motion.h1
+            variants={{ animate: { y: 0, rotateX: 0 } }}
             initial={{ y: "100%", rotateX: "-90deg" }}
-            whileInView={{ y: 0, rotateX: 0 }}
+            animate={controller}
             transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
           >
             Ready to Embrace a Greener
           </motion.h1>
           <motion.h1
             initial={{ y: "100%", rotateX: "-90deg" }}
-            whileInView={{ y: 0, rotateX: 0 }}
+            animate={controller}
+            variants={{ animate: { y: 0, rotateX: 0 } }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
           >
             Future? Explor Our Solar
           </motion.h1>
           <motion.h1
             initial={{ y: "100%", rotateX: "-90deg" }}
-            whileInView={{ y: 0, rotateX: 0 }}
+            animate={controller}
+            variants={{ animate: { y: 0, rotateX: 0 } }}
             transition={{ duration: 0.5, delay: 0.7, ease: "easeInOut" }}
           >
             Solutions Now!
           </motion.h1>
           <motion.button
             initial={{ y: "100%", rotateX: "-90deg" }}
-            whileInView={{ y: 0, rotateX: 0 }}
+            animate={controller}
+            variants={{ animate: { y: 0, rotateX: 0 } }}
             transition={{ duration: 0.5, delay: 0.9, ease: "easeInOut" }}
           >
             Contact Us
@@ -52,8 +67,10 @@ const Teams = () => {
         </div>
         <motion.div
           className={styles.footer}
-          initial={{ y: "100%", opacity: 0  }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ y: "100%", opacity: 0 }}
+          animate={controller}
+          variants={{ animate: { y: 0, opacity: 1 } }}
+          viewport={{ root: ref, margin: "400px" }}
           transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
         >
           <h1>Solars.</h1>

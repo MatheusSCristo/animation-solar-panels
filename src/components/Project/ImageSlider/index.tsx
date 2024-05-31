@@ -16,15 +16,7 @@ const slides = [
     title: "Campo Grande - Brazil",
     year: 2022,
     owner: "Pedro Ferreira",
-  },
-  { id: 3, title: "Colorado - EUA", year: 2019, owner: "Jhon Locke" },
-  { id: 4, title: "Sydney - Australia", year: 2024, owner: "Carlos Juan" },
-  {
-    id: 5,
-    title: "Campo Grande - Brazil",
-    year: 2022,
-    owner: "Pedro Ferreira",
-  },
+  }
 ];
 
 const ImageSlider = () => {
@@ -49,9 +41,9 @@ const ImageSlider = () => {
           <motion.div initial={{ height: "0", scaleX: "1.2" }}
           whileInView={{ height: "600px", scaleX: "1.0" }}
           transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
-          key={index}>
-
-          <SwiperSlide  className={styles.image_wrapper}>
+          key={item.id}
+          >
+          <SwiperSlide  className={styles.image_wrapper} key={index}>
             <motion.img
               initial={{ borderRadius: "0px",height:index==0?"0px":"100%" }}
               whileInView={{
@@ -66,7 +58,7 @@ const ImageSlider = () => {
               <h1>{item.title}</h1>
               <div className={styles.subTitle_container}>
                 <h2>{item.year}</h2>
-                <span />
+                <span/>
                 <h2>Build by {item.owner}</h2>
               </div>
             </div>
