@@ -16,11 +16,16 @@
     h1{
         text-transform: capitalize;
         font-weight: bold;
+        cursor: pointer;
     }
     h2{
         text-transform: capitalize;
         font-size: 1.4rem;
         cursor: pointer;
+        transition: scale 0.5s ease-in-out;
+        &:hover{
+            scale: 1.1;
+        }
 
     }
     .button{
@@ -31,5 +36,9 @@
         background:transparent;
         padding: 10px 35px;
         font-weight: bold;
+        transition: scale 0.5s ease-in-out;
+        &:hover{
+            scale: 1.1;
+        }
     }
 }

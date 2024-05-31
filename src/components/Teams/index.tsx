@@ -19,7 +19,7 @@ const testimonials = [
 
 const Teams = () => {
   const ref = useRef(null);
-  const inView = useInView(ref);
+  const inView = useInView(ref,{margin: "-400px"});
   const controller = useAnimationControls();
 
   useEffect(() => {

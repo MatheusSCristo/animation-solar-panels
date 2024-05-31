@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimationControls, motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -16,15 +16,16 @@ const slides = [
     title: "Campo Grande - Brazil",
     year: 2022,
     owner: "Pedro Ferreira",
-  }
+  },
 ];
 
-const ImageSlider = () => {
+const ImageSlider = ({ controller }: { controller: AnimationControls }) => {
   return (
     <motion.div
-      initial={{ height: "0" ,borderRadius: "0px" }}
-      whileInView={{ height: "600px", borderRadius: "30px" }}
-      transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
+      initial={{ height: "0", borderRadius: "0px" }}
+      variants={{ animate: { height: "600px", borderRadius: "30px" } }}
+      animate={controller}
+      transition={{ duration: 0.9, delay: 0.3, ease: "easeIn" }}
     >
       <Swiper
         className={styles.image_container}
@@ -37,34 +38,32 @@ const ImageSlider = () => {
         loop={true}
         modules={[Autoplay]}
       >
-        {slides.map((item,index) => (
-          <motion.div initial={{ height: "0", scaleX: "1.2" }}
-          whileInView={{ height: "600px", scaleX: "1.0" }}
-          transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
-          key={item.id}
+        {slides.map((item, index) => (
+          <motion.div
+            key={item.id}
           >
-          <SwiperSlide  className={styles.image_wrapper} key={index}>
-            <motion.img
-              initial={{ borderRadius: "0px",height:index==0?"0px":"100%" }}
-              whileInView={{
-                borderRadius: "30px",
-                height: "100%",
-              }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6, ease: "easeInOut" }}
-              src={`/images/panel${item.id}.jpg`}
+            <SwiperSlide className={styles.image_wrapper} key={index}>
+              <motion.img
+                animate={controller}
+                variants={{ animate: { borderRadius: "30px", height: "100%" }}}
+                initial={{
+                  borderRadius: "0px",
+                  height: index == 0 ? "0px" : "100%",
+                }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.6, ease: "easeInOut" }}
+                src={`/images/panel${item.id}.jpg`}
               />
-            <div className={styles.text_container}>
-              <h1>{item.title}</h1>
-              <div className={styles.subTitle_container}>
-                <h2>{item.year}</h2>
-                <span/>
-                <h2>Build by {item.owner}</h2>
+              <div className={styles.text_container}>
+                <h1>{item.title}</h1>
+                <div className={styles.subTitle_container}>
+                  <h2>{item.year}</h2>
+                  <span />
+                  <h2>Build by {item.owner}</h2>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
           </motion.div>
-
         ))}
       </Swiper>
     </motion.div>

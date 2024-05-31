@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useAnimationControls, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 import styles from "./style.module.scss";
 
 const cards = [
@@ -23,24 +24,37 @@ const cards = [
 ];
 
 const Services = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref,{margin:"-200px"});
+  const controller = useAnimationControls();
+
+  useEffect(() => {
+    if (inView) {
+      controller.start("animate");
+    }
+  }, [inView]);
+
   return (
-    <div className={styles.container} id="services">
+    <div className={styles.container} id="services" ref={ref}>
       <motion.div
         className={styles.wrapper}
-        initial={{ height: "0px",paddingTop: "0px"	}}
-        whileInView={{ height: "800px",paddingTop: "50px"}}
+        variants={{ animate: { height: "800px", paddingTop: "50px" } }}
+        initial={{ height: "0px", paddingTop: "0px" }}
+        animate={controller}
         transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
       >
         <motion.h1
+          variants={{ animate: { y: "0%", rotateX: "0" } }}
           initial={{ y: "100%", rotateX: "-90deg" }}
-          whileInView={{ y: "0%", rotateX: "0" }}
+          animate={controller}
           transition={{ duration: 0.4, delay: 0.5, ease: "easeInOut" }}
         >
           Voices of Confidence
         </motion.h1>
         <motion.h1
+          variants={{ animate: { y: "0%", rotateX: "0" } }}
           initial={{ y: "100%", rotateX: "-90deg" }}
-          whileInView={{ y: "0%", rotateX: "0" }}
+          animate={controller}
           transition={{ duration: 0.4, delay: 0.7, ease: "easeInOut" }}
         >
           What our clients say
@@ -51,8 +65,8 @@ const Services = () => {
               key={index}
               className={styles.card}
               initial={{ opacity: 0, y: "100%" }}
-              whileInView={{ opacity: [0, 0.2, 0.4, 0.7, 1], y: "0%" }}
-              viewport={{ once: true }}
+              variants={{animate:{opacity: [0, 0.2, 0.4, 0.7, 1], y: "0%"}}}
+              animate={controller}
               transition={{
                 duration: 1,
                 delay: 0.3 + index * 0.3,
