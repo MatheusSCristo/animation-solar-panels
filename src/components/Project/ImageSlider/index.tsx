@@ -22,10 +22,10 @@ const slides = [
 const ImageSlider = ({ controller }: { controller: AnimationControls }) => {
   return (
     <motion.div
-      initial={{ height: "0", borderRadius: "0px" }}
+      initial={{ height: "0px", borderRadius: "0px" }}
       variants={{ animate: { height: "600px", borderRadius: "30px" } }}
       animate={controller}
-      transition={{ duration: 0.9, delay: 0.3, ease: "easeIn" }}
+      transition={{ duration: 1, delay: 0.3, ease: "easeInOut"}}
     >
       <Swiper
         className={styles.image_container}
@@ -39,19 +39,17 @@ const ImageSlider = ({ controller }: { controller: AnimationControls }) => {
         modules={[Autoplay]}
       >
         {slides.map((item, index) => (
-          <motion.div
+          <div
             key={item.id}
           >
             <SwiperSlide className={styles.image_wrapper} key={index}>
               <motion.img
+                variants={{ animate: { borderRadius: "30px"}}}
                 animate={controller}
-                variants={{ animate: { borderRadius: "30px", height: "100%" }}}
                 initial={{
                   borderRadius: "0px",
-                  height: index == 0 ? "0px" : "100%",
                 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.6, ease: "easeInOut" }}
+                transition={{ duration: 0.3, delay: 1, ease: "easeInOut" }}
                 src={`/images/panel${item.id}.jpg`}
               />
               <div className={styles.text_container}>
@@ -63,7 +61,7 @@ const ImageSlider = ({ controller }: { controller: AnimationControls }) => {
                 </div>
               </div>
             </SwiperSlide>
-          </motion.div>
+          </div>
         ))}
       </Swiper>
     </motion.div>

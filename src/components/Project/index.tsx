@@ -1,7 +1,7 @@
 import { motion, useAnimationControls, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
-import ImageSlider from "./ImageSlider";
 import styles from "./style.module.scss";
+import ImageSlider from "./ImageSlider";
 
 const Project = () => {
   const ref = useRef(null);

@@ -1,24 +1,20 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Link } from "react-scroll";
 import styles from "./style.module.scss";
 
 const Navbar = () => {
   const options = [
-    { name: "home", link: "home", offset: -100 },
+    { name: "home", link: "home", offset: -200 },
     { name: "project", link: "project", offset: -50 },
     { name: "services", link: "services", offset: -100 },
     { name: "teams", link: "teams", offset: -70 },
   ];
+  const [initial, setInitial] = useState(true);
 
   return (
     <div className={styles.navbar}>
-      <Link
-        to={"home"}
-        smooth={true}
-        duration={200}
-        spy={true}
-        offset={-200}
-      >
+      <Link to={"home"} smooth={true} duration={200} spy={true} offset={-200}>
         <motion.h1
           initial={{ y: "200%" }}
           animate={{ y: 0 }}
@@ -40,6 +36,10 @@ const Navbar = () => {
             style={{ color: "#b9b9b9", transition: "color 0.3s ease-in-out" }}
           >
             <motion.h2
+              style={{ color: initial && index==0? "#000" : "" }}
+              onClick={() => {
+                if (initial) setInitial(false);
+              }}
               key={index}
               initial={{ y: "200%" }}
               animate={{ y: 0 }}

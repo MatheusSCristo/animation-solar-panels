@@ -18,7 +18,7 @@ const Image = () => {
             duration: 0.8,
             delay: 3.4,
             ease: "easeInOut",
-            times: [0, 0.9, 0.95, 1],
+            times: [0, 0.5, 0.65, 1],
           }}
           src="/images/bigImage.jpg"
           loading="lazy"
