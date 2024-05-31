@@ -6,27 +6,50 @@
     flex-direction: column;
     gap: 50px;
 
+    @media (max-width:450px) {
+        padding: 20px 10px;
+        height: fit-content;
+    }
+
     .text_container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width:900px) {
+            flex-direction: column;
+            text-align: center;
+            text-wrap: nowrap;
+            gap: 10px;
+        }
 
         .title_container {
             display: flex;
             flex-direction: column;
-
             h1 {
                 font-size: 5rem;
                 width: 800px;
                 font-weight: 500;
+
+                @media (max-width:900px) {
+                    font-size: 4rem;
+                    width: fit-content;
+                }
+
+                @media (max-width:450px) {
+                    font-size: 1.5rem;
+                }
             }
         }
 
         p {
             color: #878f96;
             font-size: 1.5rem;
+            @media (max-width:450px) {
+                font-size: 0.8rem;
+                width: fit-content;
+            }
         }
     }
 
-    
+
 }
