@@ -1,9 +1,11 @@
 .container {
     background-color: white;
     padding: 30px;
+    height: 100vh;
 
     @media (max-width:900px) {
         padding: 15px;
+        height: fit-content;
     }
 
     .wrapper {

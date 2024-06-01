@@ -6,6 +6,9 @@
     height: min-content;
     gap: 20px;
     position: relative;
+    @media (max-width:900px) {
+        min-height: fit-content;
+     }
     
 }
 
