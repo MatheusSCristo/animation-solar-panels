@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+# Landing Page Solar 
+Este projeto é uma landing page interativa criada utilizando React, TypeScript, Framer Motion para animações, react-scroll para navegação suave e Sass para estilização.
+- **Deploy**: https://animation-solar-panels.vercel.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://github.com/MatheusSCristo/animation-solar-panels/assets/138341797/b5135631-c927-476b-a7aa-79ee0b9c5dc2
 
-Currently, two official plugins are available:
+## Funcionalidades
+- **Animações Suaves**: Utilização do Framer Motion para criar animações modernas e fluidas.
+- **Scroll Suave**: Implementação de navegação suave entre seções com react-scroll.
+- **Componentização**: Desenvolvimento de componentes reutilizáveis com React e TypeScript.
+- **Estilização com Sass**: Estilos dinâmicos e modulares utilizando Sass.
+## Tecnologias Utilizadas
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **TypeScript**: Superset do JavaScript que adiciona tipos estáticos ao código.
+- **Framer Motion**: Biblioteca para animações no React.
+- **react-scroll**: Biblioteca para implementação de scroll suave.
+- **Sass**: Pré-processador CSS que permite o uso de variáveis, aninhamento e mixins.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Créditos
+Página feita seguindo o design abaixo:
+- [Animation Solars Solar Panel Company Landing Page](https://dribbble.com/shots/23377008--Animation-Solars-Solar-Panel-Company-Landing-Page)
