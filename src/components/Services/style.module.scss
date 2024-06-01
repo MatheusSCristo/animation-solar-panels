@@ -5,7 +5,12 @@
 
     @media (max-width:900px) {
         padding: 15px;
-        height: fit-content;
+        height: 150vh;
+    }
+    @media (max-width:450px) {
+        padding: 15px;
+        height: 200vh;
+
     }
 
     .wrapper {
@@ -15,6 +20,7 @@
         border-radius: 30px;
         display: flex;
         flex-direction: column;
+
         h1 {
             color: white;
             font-size: 4rem;
@@ -23,6 +29,7 @@
 
             @media (max-width:450px) {
                 font-size: 1.5rem;
+
             }
         }
 
@@ -34,6 +41,7 @@
             @media (max-width:900px) {
                 padding: 15px;
             }
+
             @media (max-width:450px) {
                 font-size: 1.5rem;
                 flex-direction: column;
@@ -49,6 +57,7 @@
                     height: fit-content;
                     width: 30%;
                 }
+
                 @media (max-width:450px) {
                     height: fit-content;
                     width: fit-content
@@ -69,6 +78,7 @@
                         width: 80px;
                     }
                 }
+
                 div {
                     height: 350px;
                     margin-top: 50px;
@@ -81,23 +91,25 @@
                     gap: 15px;
 
                     @media (max-width:900px) {
-                        padding: 10px;                        
+                        padding: 10px;
                         padding-top: 80px;
                         gap: 10px;
                         height: 250px;
                     }
+
                     @media (max-width:450px) {
                         padding-top: 50px;
                         height: 250px;
 
                         gap: 10px;
                     }
-                    
+
 
                     p {
                         color: #949090;
                         font-weight: 700;
                         font-size: 1.2rem;
+
                         @media (max-width:900px) {
                             font-size: 0.8rem;
                         }
@@ -107,6 +119,7 @@
                         color: white;
                         font-weight: 600;
                         font-size: 1.2rem;
+
                         @media (max-width:900px) {
                             font-size: 1rem;
                         }
@@ -115,6 +128,7 @@
                     h3 {
                         color: #949090;
                         font-size: 0.9rem;
+
                         @media (max-width:900px) {
                             font-size: 0.6rem;
                         }
