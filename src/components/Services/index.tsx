@@ -38,7 +38,7 @@ const Services = () => {
     <div className={styles.container} id="services" ref={ref}>
       <motion.div
         className={styles.wrapper}
-        variants={{ animate: { height: "800px", paddingTop: "50px" } }}
+        variants={{ animate: { height: "100%", paddingTop: "50px" } }}
         initial={{ height: "0px", paddingTop: "0px" }}
         animate={controller}
         transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}

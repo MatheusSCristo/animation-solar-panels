@@ -1,7 +1,10 @@
 .container {
-    height: 100vh;
     background-color: white;
     padding: 30px;
+
+    @media (max-width:900px) {
+        padding: 15px;
+    }
 
     .wrapper {
         overflow-y: hidden;
@@ -10,12 +13,15 @@
         border-radius: 30px;
         display: flex;
         flex-direction: column;
-
         h1 {
             color: white;
             font-size: 4rem;
             font-weight: 300;
             text-align: center;
+
+            @media (max-width:450px) {
+                font-size: 1.5rem;
+            }
         }
 
         .card_container {
@@ -23,10 +29,28 @@
             display: flex;
             justify-content: space-evenly;
 
+            @media (max-width:900px) {
+                padding: 15px;
+            }
+            @media (max-width:450px) {
+                font-size: 1.5rem;
+                flex-direction: column;
+                padding: 15px;
+            }
+
             .card {
                 height: 500px;
                 width: 400px;
                 position: relative;
+
+                @media (max-width:900px) {
+                    height: fit-content;
+                    width: 30%;
+                }
+                @media (max-width:450px) {
+                    height: fit-content;
+                    width: fit-content
+                }
 
                 img {
                     width: 120px;
@@ -37,8 +61,12 @@
                     position: absolute;
                     margin-left: 20px;
                     background-color: #1f2124;
-                }
 
+                    @media (max-width:450px) {
+                        height: 80px;
+                        width: 80px;
+                    }
+                }
                 div {
                     height: 350px;
                     margin-top: 50px;
@@ -50,24 +78,44 @@
                     flex-direction: column;
                     gap: 15px;
 
+                    @media (max-width:900px) {
+                        padding: 10px;                        
+                        padding-top: 80px;
+                        gap: 10px;
+                        height: 250px;
+                    }
+                    @media (max-width:450px) {
+                        padding-top: 50px;
+                        height: 250px;
+
+                        gap: 10px;
+                    }
+                    
+
                     p {
                         color: #949090;
                         font-weight: 700;
                         font-size: 1.2rem;
-
+                        @media (max-width:900px) {
+                            font-size: 0.8rem;
+                        }
                     }
 
                     h2 {
                         color: white;
                         font-weight: 600;
                         font-size: 1.2rem;
-
+                        @media (max-width:900px) {
+                            font-size: 1rem;
+                        }
                     }
 
                     h3 {
                         color: #949090;
                         font-size: 0.9rem;
-
+                        @media (max-width:900px) {
+                            font-size: 0.6rem;
+                        }
                     }
 
 
